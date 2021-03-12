@@ -1,0 +1,142 @@
+@import "fonts";
+@import "vendor";
+@import "vars";
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;600&display=swap");
+
+body {
+  font-family: "Rubik", sans-serif;
+  font-size: 16px;
+  background: url(../img/bg_2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: rgb(31, 31, 31);
+}
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+#root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+}
+.auth {
+  padding: 25px;
+  background: rgb(244 244 244 / 30%);
+  backdrop-filter: blur(2px);
+  border-radius: 15px;
+  .auth_sing-in_form {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    .fa-eye-slash {
+      position: absolute;
+      right: 5px;
+      bottom: calc(50% - 7px);
+      cursor: pointer;
+      &.active {
+        color: rgb(255, 53, 53);
+      }
+    }
+    .fa-unlock-alt {
+      position: absolute;
+      left: 2px;
+      bottom: calc(50% - 6px);
+    }
+    .fa-envelope {
+      position: absolute;
+      left: 2px;
+      bottom: calc(50% - -63px);
+    }
+  }
+  .auth_sing-in_title {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 20px;
+    position: relative;
+    width: 73px;
+    margin-bottom: 15px;
+    span {
+      color: rgb(255, 53, 53);
+    }
+    &::after {
+      width: 100%;
+      content: " ";
+      position: absolute;
+      height: 2px;
+      background: rgb(255, 53, 53);
+      bottom: -3px;
+      left: 0;
+    }
+  }
+}
+
+.auth_sing-in_form-input {
+  background: rgb(226, 226, 226);
+  border-radius: 15px;
+  border: none;
+  padding: 7px 30px 7px 7px;
+  position: relative;
+  margin-left: 25px;
+}
+
+label {
+  margin-bottom: 5px;
+}
+
+.auth_sing-in_form-btn {
+  border-radius: 15px;
+  border: none;
+  text-transform: uppercase;
+  padding: 8px;
+  background: #333;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.2s;
+  margin: 20px 0;
+  &:hover {
+    transition: 0.2s;
+
+    .not_hover {
+      color: #fff;
+      font-weight: 600;
+      transition: 0.2s;
+    }
+    .hover {
+      transition: 0.2s;
+      color: rgb(255, 53, 53);
+    }
+  }
+  .not_hover {
+    transition: 0.2s;
+    color: rgb(255, 53, 53);
+    font-weight: 600;
+  }
+}
+button:active,
+button:focus,
+input:active,
+input:focus {
+  outline: none;
+}
+
+.gorget {
+  font-size: 12px;
+  padding-top: 5px;
+}
+
+.auth_sing-in_form-input.email {
+  margin-bottom: 15px;
+}
+
+.auth_sing-in_social {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.btn_close {
+  opacity: 0.5;
+}
