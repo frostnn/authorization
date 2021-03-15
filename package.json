@@ -43,6 +43,7 @@
   },
   "dependencies": {
     "babel-preset-es2017": "^6.24.1",
+    "firebase": "^8.3.0",
     "focus-visible": "^5.2.0",
     "normalize.css": "^8.0.1"
   }

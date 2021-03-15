@@ -28,6 +28,13 @@ a {
   background: rgb(244 244 244 / 30%);
   backdrop-filter: blur(2px);
   border-radius: 15px;
+  .auth_title {
+    display: flex;
+  }
+
+  /*   .show_form {
+    display: block;
+  } */
   .auth_sing-in_form {
     display: flex;
     flex-direction: column;
@@ -56,20 +63,15 @@ a {
     text-transform: uppercase;
     font-weight: 700;
     font-size: 20px;
-    position: relative;
-    width: 73px;
-    margin-bottom: 15px;
+    width: 80px;
+    cursor: pointer;
     span {
       color: rgb(255, 53, 53);
     }
-    &::after {
-      width: 100%;
-      content: " ";
-      position: absolute;
-      height: 2px;
-      background: rgb(255, 53, 53);
-      bottom: -3px;
-      left: 0;
+    &.show {
+      position: relative;
+    }
+    &.show::after {
     }
   }
 }
@@ -139,4 +141,63 @@ input:focus {
 
 .btn_close {
   opacity: 0.5;
+}
+.auth_sing-in {
+  display: none;
+}
+.btn-2,
+.btn-1 {
+  position: relative;
+}
+#tab-btn-1:checked ~ .btn-1:before {
+  width: 100%;
+  content: " ";
+  position: absolute;
+  height: 2px;
+  background: rgb(255, 53, 53);
+  bottom: -3px;
+  left: 0;
+}
+#tab-btn-2:checked ~ .btn-2:before {
+  width: 100%;
+  content: " ";
+  position: absolute;
+  height: 2px;
+  background: rgb(255, 53, 53);
+  bottom: -3px;
+  left: 0;
+}
+#tab-btn-1:checked ~ #content-1,
+#tab-btn-2:checked ~ #content-2,
+#tab-btn-3:checked ~ #content-3 {
+  display: block;
+}
+
+#tab-btn-1,
+#tab-btn-2 {
+  visibility: hidden;
+}
+#tab-btn-1 {
+  margin-bottom: 25px;
+}
+
+.unlock_two {
+}
+.auth .auth_sing-in_form .fa-unlock-alt.unlock_two,
+.auth .auth_sing-in_form .fa-eye-slash.eye_two {
+  bottom: calc(50% - 45px);
+}
+
+.auth .auth_sing-in_form .fa-unlock-alt.unlock,
+.auth .auth_sing-in_form .fa-eye-slash.eye {
+  bottom: calc(50% - -10px);
+}
+
+.auth .auth_sing-in_form .fa-envelope.email {
+  bottom: calc(50% - -82px);
+}
+
+.admin {
+  font-size: 34px;
+  color: lemonchiffon;
 }
